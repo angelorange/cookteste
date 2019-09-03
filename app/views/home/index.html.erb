@@ -5,11 +5,11 @@
 <% @recipes.each do |r| %>
   <h1><%= link_to r.title, r %></h1>
   <ul>
-    <li><%= r.recipe_type %></li>
-    <li><%= r.cuisine.name %></li>
-    <li><%= r.difficulty %></li>
-    <li><%= r.cook_time %> minutos</li>
-    <li><%= r.ingredients %></li>
-    <li><%= r.cook_method %></li>
+    <li>tipo de receita: <%= r.recipe_type %></li>
+    <li>cozinha: <%= link_to r.cuisine.name,  %></li>
+    <li>dificuldade: <%= r.difficulty %></li>
+    <li>tempo de cozinha: <%= r.cook_time %> minutos</li>
+    <li>ingredientes: <%= r.ingredients %></li>
+    <li>metodo: <%= r.cook_method %></li>
   </ul>
 <% end %>
