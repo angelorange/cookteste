@@ -63,7 +63,7 @@ feature 'Visitor view recipes by cuisine' do
     # simula a ação do usuário
     visit root_path
     click_on italian_cuisine.name
-
+save_page
     # expectativas do usuário após a ação
     expect(page).not_to have_content(recipe.title)
     expect(page).to have_content('Nenhuma receita encontrada para este tipo de cozinha')
