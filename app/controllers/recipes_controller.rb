@@ -12,7 +12,7 @@ class RecipesController < ApplicationController
     if @recipe.save
      redirect_to @recipe
     else
-      p 'error'
+      render :new
     end
   end
 
