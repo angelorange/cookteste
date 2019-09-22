@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
     if @recipe.save
      redirect_to @recipe
     else
+      flash[:alert] = 'Você deve informar todos os dados da receita'
       render :new
     end
   end
